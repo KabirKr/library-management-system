@@ -113,23 +113,23 @@ Partial Class FormHome
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI Light", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(240, Byte), Integer))
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer))
         Me.Label1.Location = New System.Drawing.Point(0, 0)
         Me.Label1.Margin = New System.Windows.Forms.Padding(0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(303, 32)
+        Me.Label1.Size = New System.Drawing.Size(353, 37)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Library Management System"
         '
         'LblWelcome
         '
         Me.LblWelcome.AutoSize = True
-        Me.LblWelcome.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblWelcome.ForeColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(250, Byte), Integer), CType(CType(252, Byte), Integer))
-        Me.LblWelcome.Location = New System.Drawing.Point(3, 32)
+        Me.LblWelcome.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblWelcome.ForeColor = System.Drawing.Color.FromArgb(CType(CType(148, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(184, Byte), Integer))
+        Me.LblWelcome.Location = New System.Drawing.Point(3, 37)
         Me.LblWelcome.Name = "LblWelcome"
-        Me.LblWelcome.Size = New System.Drawing.Size(108, 21)
+        Me.LblWelcome.Size = New System.Drawing.Size(142, 25)
         Me.LblWelcome.TabIndex = 2
         Me.LblWelcome.Text = "Welcome Kabir"
         '
@@ -164,8 +164,8 @@ Partial Class FormHome
         Me.GroupBoxActions.Controls.Add(Me.TableLayoutPanel2)
         Me.GroupBoxActions.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GroupBoxActions.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.GroupBoxActions.Font = New System.Drawing.Font("Segoe UI Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBoxActions.ForeColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(240, Byte), Integer))
+        Me.GroupBoxActions.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBoxActions.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer))
         Me.GroupBoxActions.Location = New System.Drawing.Point(3, 119)
         Me.GroupBoxActions.Name = "GroupBoxActions"
         Me.GroupBoxActions.Size = New System.Drawing.Size(738, 282)
@@ -200,13 +200,13 @@ Partial Class FormHome
         '
         'BtnIssueBook
         '
-        Me.BtnIssueBook.BackColor = System.Drawing.Color.FromArgb(CType(CType(91, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(182, Byte), Integer))
+        Me.BtnIssueBook.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(85, Byte), Integer))
         Me.BtnIssueBook.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnIssueBook.Dock = System.Windows.Forms.DockStyle.Fill
         Me.BtnIssueBook.FlatAppearance.BorderSize = 0
         Me.BtnIssueBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnIssueBook.Font = New System.Drawing.Font("Segoe UI", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnIssueBook.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.BtnIssueBook.Font = New System.Drawing.Font("Segoe UI Semibold", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnIssueBook.ForeColor = System.Drawing.Color.FromArgb(CType(CType(203, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(225, Byte), Integer))
         Me.BtnIssueBook.Location = New System.Drawing.Point(13, 133)
         Me.BtnIssueBook.Name = "BtnIssueBook"
         Me.BtnIssueBook.Size = New System.Drawing.Size(345, 104)
@@ -216,13 +216,13 @@ Partial Class FormHome
         '
         'BtnBooks
         '
-        Me.BtnBooks.BackColor = System.Drawing.Color.FromArgb(CType(CType(91, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(182, Byte), Integer))
+        Me.BtnBooks.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(85, Byte), Integer))
         Me.BtnBooks.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnBooks.Dock = System.Windows.Forms.DockStyle.Fill
         Me.BtnBooks.FlatAppearance.BorderSize = 0
         Me.BtnBooks.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnBooks.Font = New System.Drawing.Font("Segoe UI", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnBooks.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.BtnBooks.Font = New System.Drawing.Font("Segoe UI Semibold", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnBooks.ForeColor = System.Drawing.Color.FromArgb(CType(CType(203, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(225, Byte), Integer))
         Me.BtnBooks.Location = New System.Drawing.Point(13, 13)
         Me.BtnBooks.Name = "BtnBooks"
         Me.BtnBooks.Size = New System.Drawing.Size(345, 104)
@@ -232,13 +232,13 @@ Partial Class FormHome
         '
         'BtnMembers
         '
-        Me.BtnMembers.BackColor = System.Drawing.Color.FromArgb(CType(CType(91, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(182, Byte), Integer))
+        Me.BtnMembers.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(85, Byte), Integer))
         Me.BtnMembers.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnMembers.Dock = System.Windows.Forms.DockStyle.Fill
         Me.BtnMembers.FlatAppearance.BorderSize = 0
         Me.BtnMembers.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnMembers.Font = New System.Drawing.Font("Segoe UI", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnMembers.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.BtnMembers.Font = New System.Drawing.Font("Segoe UI Semibold", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnMembers.ForeColor = System.Drawing.Color.FromArgb(CType(CType(203, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(225, Byte), Integer))
         Me.BtnMembers.Location = New System.Drawing.Point(374, 13)
         Me.BtnMembers.Name = "BtnMembers"
         Me.BtnMembers.Size = New System.Drawing.Size(345, 104)
@@ -248,13 +248,13 @@ Partial Class FormHome
         '
         'BtnReceiveBook
         '
-        Me.BtnReceiveBook.BackColor = System.Drawing.Color.FromArgb(CType(CType(91, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(182, Byte), Integer))
+        Me.BtnReceiveBook.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(85, Byte), Integer))
         Me.BtnReceiveBook.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnReceiveBook.Dock = System.Windows.Forms.DockStyle.Fill
         Me.BtnReceiveBook.FlatAppearance.BorderSize = 0
         Me.BtnReceiveBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnReceiveBook.Font = New System.Drawing.Font("Segoe UI", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnReceiveBook.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.BtnReceiveBook.Font = New System.Drawing.Font("Segoe UI Semibold", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnReceiveBook.ForeColor = System.Drawing.Color.FromArgb(CType(CType(203, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(225, Byte), Integer))
         Me.BtnReceiveBook.Location = New System.Drawing.Point(374, 133)
         Me.BtnReceiveBook.Name = "BtnReceiveBook"
         Me.BtnReceiveBook.Size = New System.Drawing.Size(345, 104)
