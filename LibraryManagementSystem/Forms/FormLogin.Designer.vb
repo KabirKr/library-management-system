@@ -35,7 +35,7 @@ Partial Class FormLogin
         '
         'PanelContainer
         '
-        Me.PanelContainer.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(59, Byte), Integer))
+        Me.PanelContainer.BackColor = System.Drawing.Color.Transparent
         Me.PanelContainer.Controls.Add(Me.LblHeading)
         Me.PanelContainer.Controls.Add(Me.BtnExit)
         Me.PanelContainer.Controls.Add(Me.BtnLogin)
@@ -54,7 +54,7 @@ Partial Class FormLogin
         '
         Me.LblHeading.AutoSize = True
         Me.LblHeading.Font = New System.Drawing.Font("Segoe UI Light", 34.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblHeading.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer))
+        Me.LblHeading.ForeColor = System.Drawing.Color.FromArgb(CType(CType(148, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(184, Byte), Integer))
         Me.LblHeading.Location = New System.Drawing.Point(114, 65)
         Me.LblHeading.Name = "LblHeading"
         Me.LblHeading.Size = New System.Drawing.Size(581, 62)
@@ -63,12 +63,14 @@ Partial Class FormLogin
         '
         'BtnExit
         '
-        Me.BtnExit.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(59, Byte), Integer))
+        Me.BtnExit.BackColor = System.Drawing.Color.Transparent
         Me.BtnExit.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.BtnExit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(75, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(99, Byte), Integer))
+        Me.BtnExit.FlatAppearance.BorderSize = 2
         Me.BtnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnExit.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnExit.ForeColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(240, Byte), Integer))
+        Me.BtnExit.ForeColor = System.Drawing.Color.FromArgb(CType(CType(75, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(99, Byte), Integer))
         Me.BtnExit.Location = New System.Drawing.Point(344, 367)
         Me.BtnExit.Name = "BtnExit"
         Me.BtnExit.Size = New System.Drawing.Size(124, 49)
@@ -78,12 +80,12 @@ Partial Class FormLogin
         '
         'BtnLogin
         '
-        Me.BtnLogin.BackColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(74, Byte), Integer))
+        Me.BtnLogin.BackColor = System.Drawing.Color.Transparent
         Me.BtnLogin.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnLogin.FlatAppearance.BorderSize = 0
+        Me.BtnLogin.FlatAppearance.BorderSize = 2
         Me.BtnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnLogin.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnLogin.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.BtnLogin.ForeColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(74, Byte), Integer))
         Me.BtnLogin.Location = New System.Drawing.Point(183, 367)
         Me.BtnLogin.Name = "BtnLogin"
         Me.BtnLogin.Size = New System.Drawing.Size(124, 49)
@@ -95,7 +97,7 @@ Partial Class FormLogin
         '
         Me.LblPassword.AutoSize = True
         Me.LblPassword.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblPassword.ForeColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(240, Byte), Integer))
+        Me.LblPassword.ForeColor = System.Drawing.Color.FromArgb(CType(CType(148, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(184, Byte), Integer))
         Me.LblPassword.Location = New System.Drawing.Point(178, 256)
         Me.LblPassword.Name = "LblPassword"
         Me.LblPassword.Size = New System.Drawing.Size(91, 25)
@@ -106,7 +108,7 @@ Partial Class FormLogin
         '
         Me.LblUsername.AutoSize = True
         Me.LblUsername.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblUsername.ForeColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(240, Byte), Integer))
+        Me.LblUsername.ForeColor = System.Drawing.Color.FromArgb(CType(CType(148, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(184, Byte), Integer))
         Me.LblUsername.Location = New System.Drawing.Point(178, 176)
         Me.LblUsername.Name = "LblUsername"
         Me.LblUsername.Size = New System.Drawing.Size(98, 25)
@@ -115,7 +117,7 @@ Partial Class FormLogin
         '
         'TextBoxPassword
         '
-        Me.TextBoxPassword.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(59, Byte), Integer))
+        Me.TextBoxPassword.BackColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(24, Byte), Integer), CType(CType(39, Byte), Integer))
         Me.TextBoxPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TextBoxPassword.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBoxPassword.ForeColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(249, Byte), Integer))
@@ -127,7 +129,7 @@ Partial Class FormLogin
         '
         'TextBoxUsername
         '
-        Me.TextBoxUsername.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(59, Byte), Integer))
+        Me.TextBoxUsername.BackColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(24, Byte), Integer), CType(CType(39, Byte), Integer))
         Me.TextBoxUsername.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TextBoxUsername.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBoxUsername.ForeColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(249, Byte), Integer))
@@ -140,7 +142,7 @@ Partial Class FormLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(250, Byte), Integer), CType(CType(252, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(24, Byte), Integer), CType(CType(39, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(784, 561)
         Me.Controls.Add(Me.PanelContainer)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog

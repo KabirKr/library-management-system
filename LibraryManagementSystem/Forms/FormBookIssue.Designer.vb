@@ -24,6 +24,9 @@ Partial Class FormBookIssue
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormBookIssue))
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TableLayoutContainer = New System.Windows.Forms.TableLayoutPanel()
         Me.ToolStrip = New System.Windows.Forms.ToolStrip()
         Me.ToolStripHome = New System.Windows.Forms.ToolStripButton()
@@ -36,32 +39,34 @@ Partial Class FormBookIssue
         Me.ToolStripAbout = New System.Windows.Forms.ToolStripButton()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.LblBookName = New System.Windows.Forms.Label()
-        Me.TextBoxName = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.BtnAdd = New System.Windows.Forms.Button()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.LibraryManagementDataSet = New LibraryManagementSystem.LibraryManagementDataSet()
-        Me.IssuesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.IssuesTableAdapter = New LibraryManagementSystem.LibraryManagementDataSetTableAdapters.IssuesTableAdapter()
-        Me.IssueIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.BooksIssueDataGridView = New System.Windows.Forms.DataGridView()
+        Me.IssueIdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.BookIdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.MemberIdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IssueDateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IssuesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.LibraryManagementDataSet = New LibraryManagementSystem.LibraryManagementDataSet()
+        Me.PickerIssueDate = New System.Windows.Forms.DateTimePicker()
+        Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
+        Me.BtnIssue = New System.Windows.Forms.Button()
+        Me.BtnUpdate = New System.Windows.Forms.Button()
+        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
+        Me.BtnDelete = New System.Windows.Forms.Button()
+        Me.BtnCancel = New System.Windows.Forms.Button()
+        Me.TextBoxBookId = New System.Windows.Forms.TextBox()
+        Me.TextBoxMemberId = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.IssuesTableAdapter = New LibraryManagementSystem.LibraryManagementDataSetTableAdapters.IssuesTableAdapter()
         Me.TableLayoutContainer.SuspendLayout()
         Me.ToolStrip.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
-        Me.TableLayoutPanel2.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LibraryManagementDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BooksIssueDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.IssuesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LibraryManagementDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TableLayoutPanel3.SuspendLayout()
+        Me.TableLayoutPanel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'TableLayoutContainer
@@ -78,35 +83,29 @@ Partial Class FormBookIssue
         Me.TableLayoutContainer.Margin = New System.Windows.Forms.Padding(0)
         Me.TableLayoutContainer.Name = "TableLayoutContainer"
         Me.TableLayoutContainer.RowCount = 5
-        Me.TableLayoutContainer.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25.0!))
-        Me.TableLayoutContainer.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
+        Me.TableLayoutContainer.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
+        Me.TableLayoutContainer.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
         Me.TableLayoutContainer.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10.0!))
-        Me.TableLayoutContainer.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90.0!))
+        Me.TableLayoutContainer.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80.0!))
         Me.TableLayoutContainer.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutContainer.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutContainer.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutContainer.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutContainer.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutContainer.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutContainer.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutContainer.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutContainer.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutContainer.Size = New System.Drawing.Size(784, 561)
-        Me.TableLayoutContainer.TabIndex = 2
+        Me.TableLayoutContainer.Size = New System.Drawing.Size(1008, 601)
+        Me.TableLayoutContainer.TabIndex = 5
         '
         'ToolStrip
         '
+        Me.ToolStrip.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(85, Byte), Integer))
         Me.TableLayoutContainer.SetColumnSpan(Me.ToolStrip, 3)
         Me.ToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripHome, Me.ToolStripDropDownBooks, Me.ToolStripMembers, Me.ToolStripLogout, Me.ToolStripAbout})
         Me.ToolStrip.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip.Name = "ToolStrip"
-        Me.ToolStrip.Size = New System.Drawing.Size(784, 25)
+        Me.ToolStrip.Size = New System.Drawing.Size(1008, 25)
         Me.ToolStrip.TabIndex = 0
         Me.ToolStrip.Text = "ToolStrip1"
         '
         'ToolStripHome
         '
         Me.ToolStripHome.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.ToolStripHome.ForeColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.ToolStripHome.Image = CType(resources.GetObject("ToolStripHome.Image"), System.Drawing.Image)
         Me.ToolStripHome.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripHome.Name = "ToolStripHome"
@@ -117,6 +116,7 @@ Partial Class FormBookIssue
         '
         Me.ToolStripDropDownBooks.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
         Me.ToolStripDropDownBooks.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ManageBooksToolStripMenuItem, Me.IssueBooksToolStripMenuItem, Me.ReceiveBookToolStripMenuItem})
+        Me.ToolStripDropDownBooks.ForeColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.ToolStripDropDownBooks.Image = CType(resources.GetObject("ToolStripDropDownBooks.Image"), System.Drawing.Image)
         Me.ToolStripDropDownBooks.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripDropDownBooks.Name = "ToolStripDropDownBooks"
@@ -131,6 +131,7 @@ Partial Class FormBookIssue
         '
         'IssueBooksToolStripMenuItem
         '
+        Me.IssueBooksToolStripMenuItem.Enabled = False
         Me.IssueBooksToolStripMenuItem.Name = "IssueBooksToolStripMenuItem"
         Me.IssueBooksToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.IssueBooksToolStripMenuItem.Text = "Issue Book"
@@ -144,6 +145,7 @@ Partial Class FormBookIssue
         'ToolStripMembers
         '
         Me.ToolStripMembers.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.ToolStripMembers.ForeColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.ToolStripMembers.Image = CType(resources.GetObject("ToolStripMembers.Image"), System.Drawing.Image)
         Me.ToolStripMembers.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripMembers.Name = "ToolStripMembers"
@@ -154,6 +156,7 @@ Partial Class FormBookIssue
         '
         Me.ToolStripLogout.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
         Me.ToolStripLogout.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.ToolStripLogout.ForeColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.ToolStripLogout.Image = CType(resources.GetObject("ToolStripLogout.Image"), System.Drawing.Image)
         Me.ToolStripLogout.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripLogout.Name = "ToolStripLogout"
@@ -164,6 +167,7 @@ Partial Class FormBookIssue
         'ToolStripAbout
         '
         Me.ToolStripAbout.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.ToolStripAbout.ForeColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.ToolStripAbout.Image = CType(resources.GetObject("ToolStripAbout.Image"), System.Drawing.Image)
         Me.ToolStripAbout.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripAbout.Name = "ToolStripAbout"
@@ -172,64 +176,61 @@ Partial Class FormBookIssue
         '
         'TableLayoutPanel1
         '
+        Me.TableLayoutPanel1.BackColor = System.Drawing.Color.Transparent
         Me.TableLayoutPanel1.ColumnCount = 4
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 125.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.5!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62.5!))
         Me.TableLayoutPanel1.Controls.Add(Me.LblBookName, 0, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.TextBoxName, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Label1, 0, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.Label2, 0, 2)
-        Me.TableLayoutPanel1.Controls.Add(Me.TextBox1, 1, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.DataGridView1, 3, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel2, 0, 3)
-        Me.TableLayoutPanel1.Controls.Add(Me.DateTimePicker1, 1, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.BooksIssueDataGridView, 3, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.PickerIssueDate, 1, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel3, 0, 4)
+        Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel2, 0, 6)
+        Me.TableLayoutPanel1.Controls.Add(Me.TextBoxBookId, 1, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.TextBoxMemberId, 1, 1)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(20, 85)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(20, 148)
         Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(0)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        Me.TableLayoutPanel1.RowCount = 5
+        Me.TableLayoutPanel1.RowCount = 8
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(744, 455)
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40.0!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(968, 432)
         Me.TableLayoutPanel1.TabIndex = 1
         '
         'LblBookName
         '
         Me.LblBookName.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LblBookName.AutoSize = True
-        Me.LblBookName.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblBookName.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblBookName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(148, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(184, Byte), Integer))
         Me.LblBookName.Location = New System.Drawing.Point(3, 0)
         Me.LblBookName.Name = "LblBookName"
-        Me.LblBookName.Size = New System.Drawing.Size(94, 21)
+        Me.LblBookName.Size = New System.Drawing.Size(119, 25)
         Me.LblBookName.TabIndex = 1
         Me.LblBookName.Text = "Book Id"
         Me.LblBookName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'TextBoxName
-        '
-        Me.TextBoxName.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBoxName.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxName.Location = New System.Drawing.Point(103, 3)
-        Me.TextBoxName.Name = "TextBoxName"
-        Me.TextBoxName.Size = New System.Drawing.Size(228, 29)
-        Me.TextBoxName.TabIndex = 2
-        '
         'Label1
         '
         Me.Label1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(3, 45)
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(148, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(184, Byte), Integer))
+        Me.Label1.Location = New System.Drawing.Point(3, 40)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(94, 21)
+        Me.Label1.Size = New System.Drawing.Size(119, 25)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Member Id"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -237,198 +238,272 @@ Partial Class FormBookIssue
         'Label2
         '
         Me.Label2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(3, 90)
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(148, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(184, Byte), Integer))
+        Me.Label2.Location = New System.Drawing.Point(3, 80)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(94, 21)
+        Me.Label2.Size = New System.Drawing.Size(119, 25)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Issue Date"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'TextBox1
+        'BooksIssueDataGridView
         '
-        Me.TextBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(103, 48)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(228, 29)
-        Me.TextBox1.TabIndex = 2
+        Me.BooksIssueDataGridView.AllowUserToAddRows = False
+        Me.BooksIssueDataGridView.AllowUserToDeleteRows = False
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BooksIssueDataGridView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        Me.BooksIssueDataGridView.AutoGenerateColumns = False
+        Me.BooksIssueDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.BooksIssueDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders
+        Me.BooksIssueDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(24, Byte), Integer), CType(CType(39, Byte), Integer))
+        Me.BooksIssueDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
+        Me.BooksIssueDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(24, Byte), Integer), CType(CType(27, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(240, Byte), Integer))
+        DataGridViewCellStyle2.Padding = New System.Windows.Forms.Padding(3)
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(24, Byte), Integer), CType(CType(27, Byte), Integer))
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(240, Byte), Integer))
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.BooksIssueDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        Me.BooksIssueDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.BooksIssueDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IssueIdDataGridViewTextBoxColumn, Me.BookIdDataGridViewTextBoxColumn, Me.MemberIdDataGridViewTextBoxColumn, Me.IssueDateDataGridViewTextBoxColumn})
+        Me.BooksIssueDataGridView.DataSource = Me.IssuesBindingSource
+        Me.BooksIssueDataGridView.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.BooksIssueDataGridView.EnableHeadersVisualStyles = False
+        Me.BooksIssueDataGridView.Location = New System.Drawing.Point(456, 3)
+        Me.BooksIssueDataGridView.MultiSelect = False
+        Me.BooksIssueDataGridView.Name = "BooksIssueDataGridView"
+        Me.BooksIssueDataGridView.ReadOnly = True
+        Me.BooksIssueDataGridView.RowHeadersVisible = False
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(24, Byte), Integer), CType(CType(39, Byte), Integer))
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(240, Byte), Integer))
+        DataGridViewCellStyle3.Padding = New System.Windows.Forms.Padding(3)
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(171, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(240, Byte), Integer))
+        Me.BooksIssueDataGridView.RowsDefaultCellStyle = DataGridViewCellStyle3
+        Me.TableLayoutPanel1.SetRowSpan(Me.BooksIssueDataGridView, 8)
+        Me.BooksIssueDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.BooksIssueDataGridView.Size = New System.Drawing.Size(509, 426)
+        Me.BooksIssueDataGridView.TabIndex = 3
         '
-        'TableLayoutPanel2
+        'IssueIdDataGridViewTextBoxColumn
         '
-        Me.TableLayoutPanel2.ColumnCount = 4
-        Me.TableLayoutPanel1.SetColumnSpan(Me.TableLayoutPanel2, 2)
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel2.Controls.Add(Me.Button3, 0, 0)
-        Me.TableLayoutPanel2.Controls.Add(Me.Button2, 0, 0)
-        Me.TableLayoutPanel2.Controls.Add(Me.Button1, 0, 0)
-        Me.TableLayoutPanel2.Controls.Add(Me.BtnAdd, 0, 0)
-        Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel2.Location = New System.Drawing.Point(3, 138)
-        Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
-        Me.TableLayoutPanel2.RowCount = 1
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(328, 39)
-        Me.TableLayoutPanel2.TabIndex = 4
-        '
-        'Button3
-        '
-        Me.Button3.BackColor = System.Drawing.Color.DarkSlateGray
-        Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Button3.FlatAppearance.BorderSize = 0
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Button3.Location = New System.Drawing.Point(164, 5)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(0, 5, 5, 5)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(77, 29)
-        Me.Button3.TabIndex = 14
-        Me.Button3.Text = "Delete"
-        Me.Button3.UseVisualStyleBackColor = False
-        '
-        'Button2
-        '
-        Me.Button2.BackColor = System.Drawing.Color.DarkSlateGray
-        Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Button2.FlatAppearance.BorderSize = 0
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Button2.Location = New System.Drawing.Point(246, 5)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(0, 5, 0, 5)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(82, 29)
-        Me.Button2.TabIndex = 13
-        Me.Button2.Text = "Cancel"
-        Me.Button2.UseVisualStyleBackColor = False
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.DarkSlateGray
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Button1.Location = New System.Drawing.Point(0, 5)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(0, 5, 5, 5)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(77, 29)
-        Me.Button1.TabIndex = 12
-        Me.Button1.Text = "Issue"
-        Me.Button1.UseVisualStyleBackColor = False
-        '
-        'BtnAdd
-        '
-        Me.BtnAdd.BackColor = System.Drawing.Color.DarkSlateGray
-        Me.BtnAdd.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnAdd.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.BtnAdd.FlatAppearance.BorderSize = 0
-        Me.BtnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnAdd.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnAdd.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.BtnAdd.Location = New System.Drawing.Point(82, 5)
-        Me.BtnAdd.Margin = New System.Windows.Forms.Padding(0, 5, 5, 5)
-        Me.BtnAdd.Name = "BtnAdd"
-        Me.BtnAdd.Size = New System.Drawing.Size(77, 29)
-        Me.BtnAdd.TabIndex = 11
-        Me.BtnAdd.Text = "Update"
-        Me.BtnAdd.UseVisualStyleBackColor = False
-        '
-        'Label5
-        '
-        Me.Label5.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label5.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(23, 25)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(738, 50)
-        Me.Label5.TabIndex = 2
-        Me.Label5.Text = "Issue Books"
-        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.AutoGenerateColumns = False
-        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IssueIDDataGridViewTextBoxColumn, Me.BookIdDataGridViewTextBoxColumn, Me.MemberIdDataGridViewTextBoxColumn, Me.IssueDateDataGridViewTextBoxColumn})
-        Me.DataGridView1.DataSource = Me.IssuesBindingSource
-        Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DataGridView1.Location = New System.Drawing.Point(357, 3)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.TableLayoutPanel1.SetRowSpan(Me.DataGridView1, 5)
-        Me.DataGridView1.Size = New System.Drawing.Size(384, 449)
-        Me.DataGridView1.TabIndex = 3
-        '
-        'DateTimePicker1
-        '
-        Me.DateTimePicker1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.DateTimePicker1.Location = New System.Drawing.Point(103, 93)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(228, 20)
-        Me.DateTimePicker1.TabIndex = 5
-        '
-        'LibraryManagementDataSet
-        '
-        Me.LibraryManagementDataSet.DataSetName = "LibraryManagementDataSet"
-        Me.LibraryManagementDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'IssuesBindingSource
-        '
-        Me.IssuesBindingSource.DataMember = "Issues"
-        Me.IssuesBindingSource.DataSource = Me.LibraryManagementDataSet
-        '
-        'IssuesTableAdapter
-        '
-        Me.IssuesTableAdapter.ClearBeforeFill = True
-        '
-        'IssueIDDataGridViewTextBoxColumn
-        '
-        Me.IssueIDDataGridViewTextBoxColumn.DataPropertyName = "IssueID"
-        Me.IssueIDDataGridViewTextBoxColumn.HeaderText = "IssueID"
-        Me.IssueIDDataGridViewTextBoxColumn.Name = "IssueIDDataGridViewTextBoxColumn"
-        Me.IssueIDDataGridViewTextBoxColumn.ReadOnly = True
-        Me.IssueIDDataGridViewTextBoxColumn.Visible = False
+        Me.IssueIdDataGridViewTextBoxColumn.DataPropertyName = "IssueId"
+        Me.IssueIdDataGridViewTextBoxColumn.HeaderText = "IssueId"
+        Me.IssueIdDataGridViewTextBoxColumn.Name = "IssueIdDataGridViewTextBoxColumn"
+        Me.IssueIdDataGridViewTextBoxColumn.ReadOnly = True
+        Me.IssueIdDataGridViewTextBoxColumn.Visible = False
         '
         'BookIdDataGridViewTextBoxColumn
         '
         Me.BookIdDataGridViewTextBoxColumn.DataPropertyName = "BookId"
         Me.BookIdDataGridViewTextBoxColumn.HeaderText = "Book Id"
         Me.BookIdDataGridViewTextBoxColumn.Name = "BookIdDataGridViewTextBoxColumn"
+        Me.BookIdDataGridViewTextBoxColumn.ReadOnly = True
         '
         'MemberIdDataGridViewTextBoxColumn
         '
         Me.MemberIdDataGridViewTextBoxColumn.DataPropertyName = "MemberId"
         Me.MemberIdDataGridViewTextBoxColumn.HeaderText = "Member Id"
         Me.MemberIdDataGridViewTextBoxColumn.Name = "MemberIdDataGridViewTextBoxColumn"
+        Me.MemberIdDataGridViewTextBoxColumn.ReadOnly = True
         '
         'IssueDateDataGridViewTextBoxColumn
         '
         Me.IssueDateDataGridViewTextBoxColumn.DataPropertyName = "IssueDate"
         Me.IssueDateDataGridViewTextBoxColumn.HeaderText = "Issue Date"
         Me.IssueDateDataGridViewTextBoxColumn.Name = "IssueDateDataGridViewTextBoxColumn"
+        Me.IssueDateDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'IssuesBindingSource
+        '
+        Me.IssuesBindingSource.DataMember = "Issues"
+        Me.IssuesBindingSource.DataSource = Me.LibraryManagementDataSet
+        '
+        'LibraryManagementDataSet
+        '
+        Me.LibraryManagementDataSet.DataSetName = "LibraryManagementDataSet"
+        Me.LibraryManagementDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'PickerIssueDate
+        '
+        Me.PickerIssueDate.CalendarFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PickerIssueDate.CalendarForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(59, Byte), Integer))
+        Me.PickerIssueDate.CalendarMonthBackground = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(59, Byte), Integer))
+        Me.PickerIssueDate.CalendarTitleBackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(59, Byte), Integer))
+        Me.PickerIssueDate.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PickerIssueDate.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PickerIssueDate.Location = New System.Drawing.Point(128, 83)
+        Me.PickerIssueDate.Name = "PickerIssueDate"
+        Me.PickerIssueDate.Size = New System.Drawing.Size(302, 25)
+        Me.PickerIssueDate.TabIndex = 5
+        '
+        'TableLayoutPanel3
+        '
+        Me.TableLayoutPanel3.ColumnCount = 3
+        Me.TableLayoutPanel1.SetColumnSpan(Me.TableLayoutPanel3, 2)
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 10.0!))
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel3.Controls.Add(Me.BtnIssue, 0, 0)
+        Me.TableLayoutPanel3.Controls.Add(Me.BtnUpdate, 2, 0)
+        Me.TableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel3.Location = New System.Drawing.Point(3, 143)
+        Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
+        Me.TableLayoutPanel3.RowCount = 1
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel3.Size = New System.Drawing.Size(427, 54)
+        Me.TableLayoutPanel3.TabIndex = 6
+        '
+        'BtnIssue
+        '
+        Me.BtnIssue.BackColor = System.Drawing.Color.Transparent
+        Me.BtnIssue.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnIssue.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.BtnIssue.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(74, Byte), Integer))
+        Me.BtnIssue.FlatAppearance.BorderSize = 2
+        Me.BtnIssue.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnIssue.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnIssue.ForeColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(74, Byte), Integer))
+        Me.BtnIssue.Location = New System.Drawing.Point(0, 5)
+        Me.BtnIssue.Margin = New System.Windows.Forms.Padding(0, 5, 5, 5)
+        Me.BtnIssue.Name = "BtnIssue"
+        Me.BtnIssue.Size = New System.Drawing.Size(203, 44)
+        Me.BtnIssue.TabIndex = 12
+        Me.BtnIssue.Text = "Issue Book"
+        Me.BtnIssue.UseVisualStyleBackColor = False
+        '
+        'BtnUpdate
+        '
+        Me.BtnUpdate.BackColor = System.Drawing.Color.Transparent
+        Me.BtnUpdate.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnUpdate.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.BtnUpdate.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(24, Byte), Integer))
+        Me.BtnUpdate.FlatAppearance.BorderSize = 2
+        Me.BtnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnUpdate.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnUpdate.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(24, Byte), Integer))
+        Me.BtnUpdate.Location = New System.Drawing.Point(218, 5)
+        Me.BtnUpdate.Margin = New System.Windows.Forms.Padding(0, 5, 5, 5)
+        Me.BtnUpdate.Name = "BtnUpdate"
+        Me.BtnUpdate.Size = New System.Drawing.Size(204, 44)
+        Me.BtnUpdate.TabIndex = 11
+        Me.BtnUpdate.Text = "Update Record"
+        Me.BtnUpdate.UseVisualStyleBackColor = False
+        '
+        'TableLayoutPanel2
+        '
+        Me.TableLayoutPanel2.ColumnCount = 3
+        Me.TableLayoutPanel1.SetColumnSpan(Me.TableLayoutPanel2, 2)
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 10.0!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel2.Controls.Add(Me.BtnDelete, 0, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.BtnCancel, 2, 0)
+        Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel2.Location = New System.Drawing.Point(3, 213)
+        Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
+        Me.TableLayoutPanel2.RowCount = 1
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(427, 54)
+        Me.TableLayoutPanel2.TabIndex = 7
+        '
+        'BtnDelete
+        '
+        Me.BtnDelete.BackColor = System.Drawing.Color.Transparent
+        Me.BtnDelete.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnDelete.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.BtnDelete.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(82, Byte), Integer), CType(CType(35, Byte), Integer))
+        Me.BtnDelete.FlatAppearance.BorderSize = 2
+        Me.BtnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnDelete.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnDelete.ForeColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(82, Byte), Integer), CType(CType(35, Byte), Integer))
+        Me.BtnDelete.Location = New System.Drawing.Point(0, 5)
+        Me.BtnDelete.Margin = New System.Windows.Forms.Padding(0, 5, 5, 5)
+        Me.BtnDelete.Name = "BtnDelete"
+        Me.BtnDelete.Size = New System.Drawing.Size(203, 44)
+        Me.BtnDelete.TabIndex = 14
+        Me.BtnDelete.Text = "Delete Record"
+        Me.BtnDelete.UseVisualStyleBackColor = False
+        '
+        'BtnCancel
+        '
+        Me.BtnCancel.BackColor = System.Drawing.Color.Transparent
+        Me.BtnCancel.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnCancel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.BtnCancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(75, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(99, Byte), Integer))
+        Me.BtnCancel.FlatAppearance.BorderSize = 2
+        Me.BtnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnCancel.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnCancel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(75, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(99, Byte), Integer))
+        Me.BtnCancel.Location = New System.Drawing.Point(218, 5)
+        Me.BtnCancel.Margin = New System.Windows.Forms.Padding(0, 5, 0, 5)
+        Me.BtnCancel.Name = "BtnCancel"
+        Me.BtnCancel.Size = New System.Drawing.Size(209, 44)
+        Me.BtnCancel.TabIndex = 13
+        Me.BtnCancel.Text = "Cancel"
+        Me.BtnCancel.UseVisualStyleBackColor = False
+        '
+        'TextBoxBookId
+        '
+        Me.TextBoxBookId.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextBoxBookId.BackColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(24, Byte), Integer), CType(CType(39, Byte), Integer))
+        Me.TextBoxBookId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBoxBookId.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBoxBookId.ForeColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(249, Byte), Integer))
+        Me.TextBoxBookId.Location = New System.Drawing.Point(128, 3)
+        Me.TextBoxBookId.Name = "TextBoxBookId"
+        Me.TextBoxBookId.Size = New System.Drawing.Size(302, 33)
+        Me.TextBoxBookId.TabIndex = 8
+        '
+        'TextBoxMemberId
+        '
+        Me.TextBoxMemberId.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextBoxMemberId.BackColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(24, Byte), Integer), CType(CType(39, Byte), Integer))
+        Me.TextBoxMemberId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBoxMemberId.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBoxMemberId.ForeColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(249, Byte), Integer))
+        Me.TextBoxMemberId.Location = New System.Drawing.Point(128, 43)
+        Me.TextBoxMemberId.Name = "TextBoxMemberId"
+        Me.TextBoxMemberId.Size = New System.Drawing.Size(302, 33)
+        Me.TextBoxMemberId.TabIndex = 9
+        '
+        'Label5
+        '
+        Me.Label5.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label5.Font = New System.Drawing.Font("Segoe UI", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(203, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(225, Byte), Integer))
+        Me.Label5.Location = New System.Drawing.Point(20, 30)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(0)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(968, 108)
+        Me.Label5.TabIndex = 2
+        Me.Label5.Text = "Issue Books"
+        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'IssuesTableAdapter
+        '
+        Me.IssuesTableAdapter.ClearBeforeFill = True
         '
         'FormBookIssue
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(784, 561)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(24, Byte), Integer), CType(CType(39, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(1008, 601)
         Me.Controls.Add(Me.TableLayoutContainer)
-        Me.MinimumSize = New System.Drawing.Size(800, 600)
+        Me.MinimumSize = New System.Drawing.Size(1024, 640)
         Me.Name = "FormBookIssue"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Book Issue"
@@ -438,42 +513,45 @@ Partial Class FormBookIssue
         Me.ToolStrip.PerformLayout()
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()
-        Me.TableLayoutPanel2.ResumeLayout(False)
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LibraryManagementDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BooksIssueDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.IssuesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LibraryManagementDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TableLayoutPanel3.ResumeLayout(False)
+        Me.TableLayoutPanel2.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents TableLayoutContainer As System.Windows.Forms.TableLayoutPanel
-    Friend WithEvents ToolStrip As System.Windows.Forms.ToolStrip
-    Friend WithEvents ToolStripHome As System.Windows.Forms.ToolStripButton
-    Friend WithEvents ToolStripDropDownBooks As System.Windows.Forms.ToolStripDropDownButton
-    Friend WithEvents ManageBooksToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents IssueBooksToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ReceiveBookToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ToolStripMembers As System.Windows.Forms.ToolStripButton
-    Friend WithEvents ToolStripLogout As System.Windows.Forms.ToolStripButton
-    Friend WithEvents ToolStripAbout As System.Windows.Forms.ToolStripButton
-    Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
-    Friend WithEvents LblBookName As System.Windows.Forms.Label
-    Friend WithEvents TextBoxName As System.Windows.Forms.TextBox
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents TableLayoutPanel2 As System.Windows.Forms.TableLayoutPanel
-    Friend WithEvents Button3 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents BtnAdd As System.Windows.Forms.Button
-    Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
-    Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
-    Friend WithEvents LibraryManagementDataSet As LibraryManagementSystem.LibraryManagementDataSet
-    Friend WithEvents IssuesBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents IssuesTableAdapter As LibraryManagementSystem.LibraryManagementDataSetTableAdapters.IssuesTableAdapter
-    Friend WithEvents IssueIDDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents BookIdDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents MemberIdDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents IssueDateDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+
+    Friend WithEvents TableLayoutContainer As TableLayoutPanel
+    Friend WithEvents ToolStrip As ToolStrip
+    Friend WithEvents ToolStripHome As ToolStripButton
+    Friend WithEvents ToolStripDropDownBooks As ToolStripDropDownButton
+    Friend WithEvents ManageBooksToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents IssueBooksToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ReceiveBookToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ToolStripMembers As ToolStripButton
+    Friend WithEvents ToolStripLogout As ToolStripButton
+    Friend WithEvents ToolStripAbout As ToolStripButton
+    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
+    Friend WithEvents LblBookName As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents PickerIssueDate As DateTimePicker
+    Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
+    Friend WithEvents BtnIssue As Button
+    Friend WithEvents BtnUpdate As Button
+    Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
+    Friend WithEvents BtnDelete As Button
+    Friend WithEvents BtnCancel As Button
+    Friend WithEvents Label5 As Label
+    Friend WithEvents TextBoxBookId As TextBox
+    Friend WithEvents TextBoxMemberId As TextBox
+    Friend WithEvents BooksIssueDataGridView As DataGridView
+    Friend WithEvents LibraryManagementDataSet As LibraryManagementDataSet
+    Friend WithEvents IssuesBindingSource As BindingSource
+    Friend WithEvents IssuesTableAdapter As LibraryManagementDataSetTableAdapters.IssuesTableAdapter
+    Friend WithEvents IssueIdDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents BookIdDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents MemberIdDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents IssueDateDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class

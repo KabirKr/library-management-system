@@ -13,5 +13,6 @@ D:\Programming\visual-basic\LibraryManagementSystem\LibraryManagementSystem\Libr
 D:\Programming\visual-basic\LibraryManagementSystem\LibraryManagementSystem\LibraryManagementSystem\obj\x86\Debug\LibraryManagementSystem.FormHome.resources
 D:\Programming\visual-basic\LibraryManagementSystem\LibraryManagementSystem\LibraryManagementSystem\obj\x86\Debug\LibraryManagementSystem.FormBookIssue.resources
 D:\Programming\visual-basic\LibraryManagementSystem\LibraryManagementSystem\LibraryManagementSystem\obj\x86\Debug\LibraryManagementSystem.FormBookReturn.resources
-D:\Programming\visual-basic\LibraryManagementSystem\LibraryManagementSystem\LibraryManagementSystem\obj\x86\Debug\LibraryManagementSystem.vbprojAssemblyReference.cache
 D:\Programming\visual-basic\LibraryManagementSystem\LibraryManagementSystem\LibraryManagementSystem\obj\x86\Debug\LibraryManagementSystem.vbproj.CoreCompileInputs.cache
+D:\Programming\visual-basic\LibraryManagementSystem\LibraryManagementSystem\LibraryManagementSystem\obj\x86\Debug\LibraryManagementSystem.FormAbout.resources
+D:\Programming\visual-basic\LibraryManagementSystem\LibraryManagementSystem\LibraryManagementSystem\obj\x86\Debug\LibraryManagementSystem.vbprojAssemblyReference.cache
