@@ -15,6 +15,9 @@
                 currentUserId = dataSet.Tables(0).Rows(0).Item("LibrarianId")
                 currentUserName = dataSet.Tables(0).Rows(0).Item("UserName")
 
+                TextBoxUsername.Clear()
+                TextBoxPassword.Clear()
+
                 FormHome.Show()
                 Me.Hide()
             Else

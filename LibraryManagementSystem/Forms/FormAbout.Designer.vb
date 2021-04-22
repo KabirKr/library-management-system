@@ -31,8 +31,8 @@ Partial Class FormAbout
         Me.IssueBooksToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReceiveBookToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMembers = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripLogout = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripAbout = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripLogout = New System.Windows.Forms.ToolStripButton()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TableLayoutContainer.SuspendLayout()
         Me.ToolStrip.SuspendLayout()
@@ -49,6 +49,8 @@ Partial Class FormAbout
         Me.TableLayoutContainer.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutContainer.Location = New System.Drawing.Point(0, 0)
         Me.TableLayoutContainer.Margin = New System.Windows.Forms.Padding(0)
+        Me.TableLayoutContainer.MaximumSize = New System.Drawing.Size(800, 600)
+        Me.TableLayoutContainer.MinimumSize = New System.Drawing.Size(800, 600)
         Me.TableLayoutContainer.Name = "TableLayoutContainer"
         Me.TableLayoutContainer.RowCount = 5
         Me.TableLayoutContainer.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25.0!))
@@ -56,14 +58,14 @@ Partial Class FormAbout
         Me.TableLayoutContainer.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10.0!))
         Me.TableLayoutContainer.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80.0!))
         Me.TableLayoutContainer.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutContainer.Size = New System.Drawing.Size(800, 561)
+        Me.TableLayoutContainer.Size = New System.Drawing.Size(800, 600)
         Me.TableLayoutContainer.TabIndex = 2
         '
         'ToolStrip
         '
         Me.ToolStrip.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(85, Byte), Integer))
         Me.TableLayoutContainer.SetColumnSpan(Me.ToolStrip, 3)
-        Me.ToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripHome, Me.ToolStripDropDownBooks, Me.ToolStripMembers, Me.ToolStripLogout, Me.ToolStripAbout})
+        Me.ToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripHome, Me.ToolStripDropDownBooks, Me.ToolStripMembers, Me.ToolStripAbout, Me.ToolStripLogout})
         Me.ToolStrip.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip.Name = "ToolStrip"
         Me.ToolStrip.Size = New System.Drawing.Size(800, 25)
@@ -119,18 +121,6 @@ Partial Class FormAbout
         Me.ToolStripMembers.Size = New System.Drawing.Size(61, 22)
         Me.ToolStripMembers.Text = "Members"
         '
-        'ToolStripLogout
-        '
-        Me.ToolStripLogout.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.ToolStripLogout.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.ToolStripLogout.ForeColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.ToolStripLogout.Image = CType(resources.GetObject("ToolStripLogout.Image"), System.Drawing.Image)
-        Me.ToolStripLogout.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripLogout.Name = "ToolStripLogout"
-        Me.ToolStripLogout.Overflow = System.Windows.Forms.ToolStripItemOverflow.Never
-        Me.ToolStripLogout.Size = New System.Drawing.Size(49, 22)
-        Me.ToolStripLogout.Text = "Logout"
-        '
         'ToolStripAbout
         '
         Me.ToolStripAbout.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
@@ -142,6 +132,22 @@ Partial Class FormAbout
         Me.ToolStripAbout.Size = New System.Drawing.Size(44, 22)
         Me.ToolStripAbout.Text = "About"
         '
+        'ToolStripLogout
+        '
+        Me.ToolStripLogout.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.ToolStripLogout.BackColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(23, Byte), Integer), CType(CType(42, Byte), Integer))
+        Me.ToolStripLogout.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.ToolStripLogout.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripLogout.ForeColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.ToolStripLogout.Image = CType(resources.GetObject("ToolStripLogout.Image"), System.Drawing.Image)
+        Me.ToolStripLogout.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripLogout.Margin = New System.Windows.Forms.Padding(0, 1, 20, 2)
+        Me.ToolStripLogout.Name = "ToolStripLogout"
+        Me.ToolStripLogout.Overflow = System.Windows.Forms.ToolStripItemOverflow.Never
+        Me.ToolStripLogout.Padding = New System.Windows.Forms.Padding(3)
+        Me.ToolStripLogout.Size = New System.Drawing.Size(61, 22)
+        Me.ToolStripLogout.Text = "Logout"
+        '
         'Label5
         '
         Me.Label5.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
@@ -151,7 +157,7 @@ Partial Class FormAbout
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(139, Byte), Integer))
         Me.Label5.Location = New System.Drawing.Point(23, 25)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(754, 101)
+        Me.Label5.Size = New System.Drawing.Size(754, 109)
         Me.Label5.TabIndex = 2
         Me.Label5.Text = "About"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -163,6 +169,8 @@ Partial Class FormAbout
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(59, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(800, 561)
         Me.Controls.Add(Me.TableLayoutContainer)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.MinimumSize = New System.Drawing.Size(800, 600)
         Me.Name = "FormAbout"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -183,7 +191,7 @@ Partial Class FormAbout
     Friend WithEvents IssueBooksToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReceiveBookToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripMembers As ToolStripButton
-    Friend WithEvents ToolStripLogout As ToolStripButton
     Friend WithEvents ToolStripAbout As ToolStripButton
     Friend WithEvents Label5 As Label
+    Friend WithEvents ToolStripLogout As ToolStripButton
 End Class

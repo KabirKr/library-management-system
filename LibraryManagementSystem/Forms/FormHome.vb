@@ -27,4 +27,11 @@
         Me.Hide()
     End Sub
 
+    Private Sub BtnLogout_Click(sender As Object, e As EventArgs) Handles BtnLogout.Click
+        currentUserId = 0
+        currentUserName = ""
+
+        FormLogin.Show()
+        Me.Hide()
+    End Sub
 End Class

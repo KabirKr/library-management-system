@@ -98,7 +98,7 @@ Partial Class FormBookIssue
         Me.ToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripHome, Me.ToolStripDropDownBooks, Me.ToolStripMembers, Me.ToolStripLogout, Me.ToolStripAbout})
         Me.ToolStrip.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip.Name = "ToolStrip"
-        Me.ToolStrip.Size = New System.Drawing.Size(1008, 25)
+        Me.ToolStrip.Size = New System.Drawing.Size(1008, 30)
         Me.ToolStrip.TabIndex = 0
         Me.ToolStrip.Text = "ToolStrip1"
         '
@@ -109,7 +109,7 @@ Partial Class FormBookIssue
         Me.ToolStripHome.Image = CType(resources.GetObject("ToolStripHome.Image"), System.Drawing.Image)
         Me.ToolStripHome.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripHome.Name = "ToolStripHome"
-        Me.ToolStripHome.Size = New System.Drawing.Size(44, 22)
+        Me.ToolStripHome.Size = New System.Drawing.Size(44, 27)
         Me.ToolStripHome.Text = "Home"
         '
         'ToolStripDropDownBooks
@@ -120,7 +120,7 @@ Partial Class FormBookIssue
         Me.ToolStripDropDownBooks.Image = CType(resources.GetObject("ToolStripDropDownBooks.Image"), System.Drawing.Image)
         Me.ToolStripDropDownBooks.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripDropDownBooks.Name = "ToolStripDropDownBooks"
-        Me.ToolStripDropDownBooks.Size = New System.Drawing.Size(52, 22)
+        Me.ToolStripDropDownBooks.Size = New System.Drawing.Size(52, 27)
         Me.ToolStripDropDownBooks.Text = "Books"
         '
         'ManageBooksToolStripMenuItem
@@ -149,19 +149,23 @@ Partial Class FormBookIssue
         Me.ToolStripMembers.Image = CType(resources.GetObject("ToolStripMembers.Image"), System.Drawing.Image)
         Me.ToolStripMembers.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripMembers.Name = "ToolStripMembers"
-        Me.ToolStripMembers.Size = New System.Drawing.Size(61, 22)
+        Me.ToolStripMembers.Size = New System.Drawing.Size(61, 27)
         Me.ToolStripMembers.Text = "Members"
         '
         'ToolStripLogout
         '
         Me.ToolStripLogout.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.ToolStripLogout.BackColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(23, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.ToolStripLogout.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.ToolStripLogout.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ToolStripLogout.ForeColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.ToolStripLogout.Image = CType(resources.GetObject("ToolStripLogout.Image"), System.Drawing.Image)
         Me.ToolStripLogout.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripLogout.Margin = New System.Windows.Forms.Padding(0, 1, 20, 2)
         Me.ToolStripLogout.Name = "ToolStripLogout"
         Me.ToolStripLogout.Overflow = System.Windows.Forms.ToolStripItemOverflow.Never
-        Me.ToolStripLogout.Size = New System.Drawing.Size(49, 22)
+        Me.ToolStripLogout.Padding = New System.Windows.Forms.Padding(3)
+        Me.ToolStripLogout.Size = New System.Drawing.Size(61, 27)
         Me.ToolStripLogout.Text = "Logout"
         '
         'ToolStripAbout
@@ -171,7 +175,7 @@ Partial Class FormBookIssue
         Me.ToolStripAbout.Image = CType(resources.GetObject("ToolStripAbout.Image"), System.Drawing.Image)
         Me.ToolStripAbout.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripAbout.Name = "ToolStripAbout"
-        Me.ToolStripAbout.Size = New System.Drawing.Size(44, 22)
+        Me.ToolStripAbout.Size = New System.Drawing.Size(44, 27)
         Me.ToolStripAbout.Text = "About"
         '
         'TableLayoutPanel1

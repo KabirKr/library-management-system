@@ -159,7 +159,6 @@ Public Class FormMembers
 
     Private Sub ToolStripAbout_Click(sender As Object, e As EventArgs) Handles ToolStripAbout.Click
         FormAbout.Show()
-        Me.Hide()
     End Sub
 
     Private Sub IssueBooksToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles IssueBooksToolStripMenuItem.Click
@@ -174,6 +173,14 @@ Public Class FormMembers
 
     Private Sub ManageBooksToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ManageBooksToolStripMenuItem.Click
         FormBooks.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub ToolStripLogout_Click(sender As Object, e As EventArgs) Handles ToolStripLogout.Click
+        currentUserId = 0
+        currentUserName = ""
+
+        FormLogin.Show()
         Me.Hide()
     End Sub
 End Class

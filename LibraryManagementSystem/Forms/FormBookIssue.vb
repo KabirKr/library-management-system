@@ -135,6 +135,13 @@ Public Class FormBookIssue
 
     Private Sub ToolStripAbout_Click(sender As Object, e As EventArgs) Handles ToolStripAbout.Click
         FormAbout.Show()
+    End Sub
+
+    Private Sub ToolStripLogout_Click(sender As Object, e As EventArgs) Handles ToolStripLogout.Click
+        currentUserId = 0
+        currentUserName = ""
+
+        FormLogin.Show()
         Me.Hide()
     End Sub
 End Class

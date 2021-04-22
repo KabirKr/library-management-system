@@ -147,16 +147,18 @@ Partial Class FormHome
         'BtnLogout
         '
         Me.BtnLogout.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.BtnLogout.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(85, Byte), Integer))
         Me.BtnLogout.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnLogout.FlatAppearance.BorderSize = 0
         Me.BtnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnLogout.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnLogout.ForeColor = System.Drawing.Color.FromArgb(CType(CType(203, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(225, Byte), Integer))
         Me.BtnLogout.Location = New System.Drawing.Point(294, 3)
         Me.BtnLogout.Name = "BtnLogout"
-        Me.BtnLogout.Size = New System.Drawing.Size(75, 23)
+        Me.BtnLogout.Size = New System.Drawing.Size(75, 34)
         Me.BtnLogout.TabIndex = 0
         Me.BtnLogout.Text = "Logout"
-        Me.BtnLogout.UseVisualStyleBackColor = True
+        Me.BtnLogout.UseVisualStyleBackColor = False
         '
         'GroupBoxActions
         '
