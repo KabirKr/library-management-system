@@ -24,8 +24,8 @@ Partial Class FormMembers
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormMembers))
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TableLayoutContainer = New System.Windows.Forms.TableLayoutPanel()
         Me.ToolStrip = New System.Windows.Forms.ToolStrip()
         Me.ToolStripHome = New System.Windows.Forms.ToolStripButton()
@@ -34,8 +34,6 @@ Partial Class FormMembers
         Me.IssueBooksToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReceiveBookToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMembers = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripLogout = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripAbout = New System.Windows.Forms.ToolStripButton()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.TextBoxName = New System.Windows.Forms.TextBox()
         Me.LblBookName = New System.Windows.Forms.Label()
@@ -53,23 +51,17 @@ Partial Class FormMembers
         Me.TextBoxPhone = New System.Windows.Forms.TextBox()
         Me.TextBoxEmail = New System.Windows.Forms.TextBox()
         Me.TextBoxAddress = New System.Windows.Forms.TextBox()
-        Me.DataGridViewMembers = New System.Windows.Forms.DataGridView()
-        Me.MemberIdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.AgeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PhoneDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EmailDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.AddressDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MembersDataGridView = New System.Windows.Forms.DataGridView()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.MembersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.LibraryManagementDataSet = New LibraryManagementSystem.LibraryManagementDataSet()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.MembersTableAdapter = New LibraryManagementSystem.LibraryManagementDataSetTableAdapters.MembersTableAdapter()
         Me.TableLayoutContainer.SuspendLayout()
         Me.ToolStrip.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
-        CType(Me.DataGridViewMembers, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MembersDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MembersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LibraryManagementDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -100,10 +92,10 @@ Partial Class FormMembers
         '
         Me.ToolStrip.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(85, Byte), Integer))
         Me.TableLayoutContainer.SetColumnSpan(Me.ToolStrip, 3)
-        Me.ToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripHome, Me.ToolStripDropDownBooks, Me.ToolStripMembers, Me.ToolStripLogout, Me.ToolStripAbout})
+        Me.ToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripHome, Me.ToolStripDropDownBooks, Me.ToolStripMembers})
         Me.ToolStrip.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip.Name = "ToolStrip"
-        Me.ToolStrip.Size = New System.Drawing.Size(1008, 28)
+        Me.ToolStrip.Size = New System.Drawing.Size(1008, 25)
         Me.ToolStrip.TabIndex = 0
         Me.ToolStrip.Text = "ToolStrip1"
         '
@@ -114,7 +106,7 @@ Partial Class FormMembers
         Me.ToolStripHome.Image = CType(resources.GetObject("ToolStripHome.Image"), System.Drawing.Image)
         Me.ToolStripHome.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripHome.Name = "ToolStripHome"
-        Me.ToolStripHome.Size = New System.Drawing.Size(44, 25)
+        Me.ToolStripHome.Size = New System.Drawing.Size(44, 22)
         Me.ToolStripHome.Text = "Home"
         '
         'ToolStripDropDownBooks
@@ -157,32 +149,6 @@ Partial Class FormMembers
         Me.ToolStripMembers.Size = New System.Drawing.Size(61, 22)
         Me.ToolStripMembers.Text = "Members"
         '
-        'ToolStripLogout
-        '
-        Me.ToolStripLogout.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.ToolStripLogout.BackColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(23, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.ToolStripLogout.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.ToolStripLogout.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ToolStripLogout.ForeColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.ToolStripLogout.Image = CType(resources.GetObject("ToolStripLogout.Image"), System.Drawing.Image)
-        Me.ToolStripLogout.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripLogout.Margin = New System.Windows.Forms.Padding(0, 1, 20, 2)
-        Me.ToolStripLogout.Name = "ToolStripLogout"
-        Me.ToolStripLogout.Overflow = System.Windows.Forms.ToolStripItemOverflow.Never
-        Me.ToolStripLogout.Padding = New System.Windows.Forms.Padding(2)
-        Me.ToolStripLogout.Size = New System.Drawing.Size(59, 25)
-        Me.ToolStripLogout.Text = "Logout"
-        '
-        'ToolStripAbout
-        '
-        Me.ToolStripAbout.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.ToolStripAbout.ForeColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.ToolStripAbout.Image = CType(resources.GetObject("ToolStripAbout.Image"), System.Drawing.Image)
-        Me.ToolStripAbout.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripAbout.Name = "ToolStripAbout"
-        Me.ToolStripAbout.Size = New System.Drawing.Size(44, 22)
-        Me.ToolStripAbout.Text = "About"
-        '
         'TableLayoutPanel1
         '
         Me.TableLayoutPanel1.BackColor = System.Drawing.Color.Transparent
@@ -203,7 +169,7 @@ Partial Class FormMembers
         Me.TableLayoutPanel1.Controls.Add(Me.TextBoxPhone, 1, 2)
         Me.TableLayoutPanel1.Controls.Add(Me.TextBoxEmail, 1, 3)
         Me.TableLayoutPanel1.Controls.Add(Me.TextBoxAddress, 1, 4)
-        Me.TableLayoutPanel1.Controls.Add(Me.DataGridViewMembers, 3, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.MembersDataGridView, 3, 0)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(20, 148)
         Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(0)
@@ -227,7 +193,6 @@ Partial Class FormMembers
         Me.TextBoxName.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBoxName.BackColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(24, Byte), Integer), CType(CType(39, Byte), Integer))
-        Me.TextBoxName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TextBoxName.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBoxName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(249, Byte), Integer))
         Me.TextBoxName.Location = New System.Drawing.Point(103, 3)
@@ -241,7 +206,7 @@ Partial Class FormMembers
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LblBookName.AutoSize = True
         Me.LblBookName.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblBookName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(148, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(184, Byte), Integer))
+        Me.LblBookName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.LblBookName.Location = New System.Drawing.Point(3, 0)
         Me.LblBookName.Name = "LblBookName"
         Me.LblBookName.Size = New System.Drawing.Size(94, 25)
@@ -255,7 +220,7 @@ Partial Class FormMembers
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(148, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(184, Byte), Integer))
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Label1.Location = New System.Drawing.Point(3, 49)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(94, 25)
@@ -269,7 +234,7 @@ Partial Class FormMembers
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(148, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(184, Byte), Integer))
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Label2.Location = New System.Drawing.Point(3, 98)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(94, 25)
@@ -283,7 +248,7 @@ Partial Class FormMembers
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(148, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(184, Byte), Integer))
+        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Label3.Location = New System.Drawing.Point(3, 147)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(94, 25)
@@ -297,7 +262,7 @@ Partial Class FormMembers
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(148, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(184, Byte), Integer))
+        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Label4.Location = New System.Drawing.Point(3, 196)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(94, 25)
@@ -329,7 +294,7 @@ Partial Class FormMembers
         Me.BtnAdd.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnAdd.Dock = System.Windows.Forms.DockStyle.Fill
         Me.BtnAdd.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(74, Byte), Integer))
-        Me.BtnAdd.FlatAppearance.BorderSize = 2
+        Me.BtnAdd.FlatAppearance.BorderSize = 4
         Me.BtnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnAdd.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnAdd.ForeColor = System.Drawing.Color.FromArgb(CType(CType(22, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(74, Byte), Integer))
@@ -338,7 +303,7 @@ Partial Class FormMembers
         Me.BtnAdd.Name = "BtnAdd"
         Me.BtnAdd.Size = New System.Drawing.Size(191, 45)
         Me.BtnAdd.TabIndex = 0
-        Me.BtnAdd.Text = "Add Member"
+        Me.BtnAdd.Text = "ADD MEMBER"
         Me.BtnAdd.UseVisualStyleBackColor = False
         '
         'BtnUpdate
@@ -347,7 +312,7 @@ Partial Class FormMembers
         Me.BtnUpdate.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnUpdate.Dock = System.Windows.Forms.DockStyle.Fill
         Me.BtnUpdate.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(24, Byte), Integer))
-        Me.BtnUpdate.FlatAppearance.BorderSize = 2
+        Me.BtnUpdate.FlatAppearance.BorderSize = 4
         Me.BtnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnUpdate.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnUpdate.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(24, Byte), Integer))
@@ -356,7 +321,7 @@ Partial Class FormMembers
         Me.BtnUpdate.Name = "BtnUpdate"
         Me.BtnUpdate.Size = New System.Drawing.Size(191, 45)
         Me.BtnUpdate.TabIndex = 1
-        Me.BtnUpdate.Text = "Update Member"
+        Me.BtnUpdate.Text = "UPDATE MEMBER"
         Me.BtnUpdate.UseVisualStyleBackColor = False
         '
         'TableLayoutPanel3
@@ -383,7 +348,7 @@ Partial Class FormMembers
         Me.BtnDelete.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnDelete.Dock = System.Windows.Forms.DockStyle.Fill
         Me.BtnDelete.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(82, Byte), Integer), CType(CType(35, Byte), Integer))
-        Me.BtnDelete.FlatAppearance.BorderSize = 2
+        Me.BtnDelete.FlatAppearance.BorderSize = 4
         Me.BtnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnDelete.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnDelete.ForeColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(82, Byte), Integer), CType(CType(35, Byte), Integer))
@@ -392,7 +357,7 @@ Partial Class FormMembers
         Me.BtnDelete.Name = "BtnDelete"
         Me.BtnDelete.Size = New System.Drawing.Size(191, 45)
         Me.BtnDelete.TabIndex = 0
-        Me.BtnDelete.Text = "Delete Member"
+        Me.BtnDelete.Text = "DELETE MEMBER"
         Me.BtnDelete.UseVisualStyleBackColor = False
         '
         'BtnCancel
@@ -400,17 +365,17 @@ Partial Class FormMembers
         Me.BtnCancel.BackColor = System.Drawing.Color.Transparent
         Me.BtnCancel.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnCancel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.BtnCancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(75, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(99, Byte), Integer))
-        Me.BtnCancel.FlatAppearance.BorderSize = 2
+        Me.BtnCancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(148, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(184, Byte), Integer))
+        Me.BtnCancel.FlatAppearance.BorderSize = 4
         Me.BtnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnCancel.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnCancel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(75, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(99, Byte), Integer))
+        Me.BtnCancel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(148, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(184, Byte), Integer))
         Me.BtnCancel.Location = New System.Drawing.Point(216, 5)
         Me.BtnCancel.Margin = New System.Windows.Forms.Padding(0, 5, 0, 5)
         Me.BtnCancel.Name = "BtnCancel"
         Me.BtnCancel.Size = New System.Drawing.Size(196, 45)
         Me.BtnCancel.TabIndex = 1
-        Me.BtnCancel.Text = "Cancel"
+        Me.BtnCancel.Text = "CANCEL"
         Me.BtnCancel.UseVisualStyleBackColor = False
         '
         'TextBoxAge
@@ -418,7 +383,6 @@ Partial Class FormMembers
         Me.TextBoxAge.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBoxAge.BackColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(24, Byte), Integer), CType(CType(39, Byte), Integer))
-        Me.TextBoxAge.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TextBoxAge.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBoxAge.ForeColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(249, Byte), Integer))
         Me.TextBoxAge.Location = New System.Drawing.Point(103, 52)
@@ -431,7 +395,6 @@ Partial Class FormMembers
         Me.TextBoxPhone.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBoxPhone.BackColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(24, Byte), Integer), CType(CType(39, Byte), Integer))
-        Me.TextBoxPhone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TextBoxPhone.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBoxPhone.ForeColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(249, Byte), Integer))
         Me.TextBoxPhone.Location = New System.Drawing.Point(103, 101)
@@ -444,7 +407,6 @@ Partial Class FormMembers
         Me.TextBoxEmail.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBoxEmail.BackColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(24, Byte), Integer), CType(CType(39, Byte), Integer))
-        Me.TextBoxEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TextBoxEmail.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBoxEmail.ForeColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(249, Byte), Integer))
         Me.TextBoxEmail.Location = New System.Drawing.Point(103, 150)
@@ -455,7 +417,6 @@ Partial Class FormMembers
         'TextBoxAddress
         '
         Me.TextBoxAddress.BackColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(24, Byte), Integer), CType(CType(39, Byte), Integer))
-        Me.TextBoxAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TextBoxAddress.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TextBoxAddress.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBoxAddress.ForeColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(249, Byte), Integer))
@@ -465,89 +426,58 @@ Partial Class FormMembers
         Me.TextBoxAddress.Size = New System.Drawing.Size(312, 55)
         Me.TextBoxAddress.TabIndex = 9
         '
-        'DataGridViewMembers
+        'MembersDataGridView
         '
-        Me.DataGridViewMembers.AllowUserToAddRows = False
-        Me.DataGridViewMembers.AllowUserToDeleteRows = False
-        Me.DataGridViewMembers.AutoGenerateColumns = False
-        Me.DataGridViewMembers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DataGridViewMembers.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders
-        Me.DataGridViewMembers.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(24, Byte), Integer), CType(CType(39, Byte), Integer))
-        Me.DataGridViewMembers.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
-        Me.DataGridViewMembers.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(24, Byte), Integer), CType(CType(27, Byte), Integer))
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(240, Byte), Integer))
-        DataGridViewCellStyle7.Padding = New System.Windows.Forms.Padding(3)
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(24, Byte), Integer), CType(CType(27, Byte), Integer))
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(240, Byte), Integer))
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewMembers.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
-        Me.DataGridViewMembers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridViewMembers.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.MemberIdDataGridViewTextBoxColumn, Me.NameDataGridViewTextBoxColumn, Me.AgeDataGridViewTextBoxColumn, Me.PhoneDataGridViewTextBoxColumn, Me.EmailDataGridViewTextBoxColumn, Me.AddressDataGridViewTextBoxColumn})
-        Me.DataGridViewMembers.DataSource = Me.MembersBindingSource
-        Me.DataGridViewMembers.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DataGridViewMembers.EnableHeadersVisualStyles = False
-        Me.DataGridViewMembers.Location = New System.Drawing.Point(441, 3)
-        Me.DataGridViewMembers.Name = "DataGridViewMembers"
-        Me.DataGridViewMembers.ReadOnly = True
-        Me.DataGridViewMembers.RowHeadersVisible = False
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(24, Byte), Integer), CType(CType(39, Byte), Integer))
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(240, Byte), Integer))
-        DataGridViewCellStyle8.Padding = New System.Windows.Forms.Padding(3)
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(171, Byte), Integer))
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(240, Byte), Integer))
-        Me.DataGridViewMembers.RowsDefaultCellStyle = DataGridViewCellStyle8
-        Me.TableLayoutPanel1.SetRowSpan(Me.DataGridViewMembers, 10)
-        Me.DataGridViewMembers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridViewMembers.Size = New System.Drawing.Size(524, 426)
-        Me.DataGridViewMembers.TabIndex = 12
+        Me.MembersDataGridView.AllowUserToAddRows = False
+        Me.MembersDataGridView.AllowUserToDeleteRows = False
+        Me.MembersDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.MembersDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders
+        Me.MembersDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(24, Byte), Integer), CType(CType(39, Byte), Integer))
+        Me.MembersDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
+        Me.MembersDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(24, Byte), Integer), CType(CType(27, Byte), Integer))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(240, Byte), Integer))
+        DataGridViewCellStyle1.Padding = New System.Windows.Forms.Padding(3)
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(24, Byte), Integer), CType(CType(27, Byte), Integer))
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(240, Byte), Integer))
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.MembersDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.MembersDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.MembersDataGridView.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.MembersDataGridView.EnableHeadersVisualStyles = False
+        Me.MembersDataGridView.Location = New System.Drawing.Point(441, 3)
+        Me.MembersDataGridView.Name = "MembersDataGridView"
+        Me.MembersDataGridView.ReadOnly = True
+        Me.MembersDataGridView.RowHeadersVisible = False
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(24, Byte), Integer), CType(CType(39, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(240, Byte), Integer))
+        DataGridViewCellStyle2.Padding = New System.Windows.Forms.Padding(3)
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(171, Byte), Integer))
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(240, Byte), Integer))
+        Me.MembersDataGridView.RowsDefaultCellStyle = DataGridViewCellStyle2
+        Me.TableLayoutPanel1.SetRowSpan(Me.MembersDataGridView, 10)
+        Me.MembersDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.MembersDataGridView.Size = New System.Drawing.Size(524, 426)
+        Me.MembersDataGridView.TabIndex = 12
         '
-        'MemberIdDataGridViewTextBoxColumn
+        'Label5
         '
-        Me.MemberIdDataGridViewTextBoxColumn.DataPropertyName = "MemberId"
-        Me.MemberIdDataGridViewTextBoxColumn.HeaderText = "MemberId"
-        Me.MemberIdDataGridViewTextBoxColumn.Name = "MemberIdDataGridViewTextBoxColumn"
-        Me.MemberIdDataGridViewTextBoxColumn.ReadOnly = True
-        Me.MemberIdDataGridViewTextBoxColumn.Visible = False
-        '
-        'NameDataGridViewTextBoxColumn
-        '
-        Me.NameDataGridViewTextBoxColumn.DataPropertyName = "Name"
-        Me.NameDataGridViewTextBoxColumn.HeaderText = "Name"
-        Me.NameDataGridViewTextBoxColumn.Name = "NameDataGridViewTextBoxColumn"
-        Me.NameDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'AgeDataGridViewTextBoxColumn
-        '
-        Me.AgeDataGridViewTextBoxColumn.DataPropertyName = "Age"
-        Me.AgeDataGridViewTextBoxColumn.HeaderText = "Age"
-        Me.AgeDataGridViewTextBoxColumn.Name = "AgeDataGridViewTextBoxColumn"
-        Me.AgeDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'PhoneDataGridViewTextBoxColumn
-        '
-        Me.PhoneDataGridViewTextBoxColumn.DataPropertyName = "Phone"
-        Me.PhoneDataGridViewTextBoxColumn.HeaderText = "Phone"
-        Me.PhoneDataGridViewTextBoxColumn.Name = "PhoneDataGridViewTextBoxColumn"
-        Me.PhoneDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'EmailDataGridViewTextBoxColumn
-        '
-        Me.EmailDataGridViewTextBoxColumn.DataPropertyName = "Email"
-        Me.EmailDataGridViewTextBoxColumn.HeaderText = "Email"
-        Me.EmailDataGridViewTextBoxColumn.Name = "EmailDataGridViewTextBoxColumn"
-        Me.EmailDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'AddressDataGridViewTextBoxColumn
-        '
-        Me.AddressDataGridViewTextBoxColumn.DataPropertyName = "Address"
-        Me.AddressDataGridViewTextBoxColumn.HeaderText = "Address"
-        Me.AddressDataGridViewTextBoxColumn.Name = "AddressDataGridViewTextBoxColumn"
-        Me.AddressDataGridViewTextBoxColumn.ReadOnly = True
+        Me.Label5.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label5.Font = New System.Drawing.Font("Segoe UI", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(211, Byte), Integer), CType(CType(77, Byte), Integer))
+        Me.Label5.Location = New System.Drawing.Point(20, 30)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(0)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(968, 108)
+        Me.Label5.TabIndex = 1
+        Me.Label5.Text = "Manage Members"
+        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'MembersBindingSource
         '
@@ -558,21 +488,6 @@ Partial Class FormMembers
         '
         Me.LibraryManagementDataSet.DataSetName = "LibraryManagementDataSet"
         Me.LibraryManagementDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'Label5
-        '
-        Me.Label5.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label5.Font = New System.Drawing.Font("Segoe UI Semilight", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(20, 30)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(0)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(968, 108)
-        Me.Label5.TabIndex = 1
-        Me.Label5.Text = "Manage Members"
-        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'MembersTableAdapter
         '
@@ -597,7 +512,7 @@ Partial Class FormMembers
         Me.TableLayoutPanel1.PerformLayout()
         Me.TableLayoutPanel2.ResumeLayout(False)
         Me.TableLayoutPanel3.ResumeLayout(False)
-        CType(Me.DataGridViewMembers, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MembersDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MembersBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LibraryManagementDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -612,8 +527,6 @@ Partial Class FormMembers
     Friend WithEvents IssueBooksToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReceiveBookToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripMembers As ToolStripButton
-    Friend WithEvents ToolStripLogout As ToolStripButton
-    Friend WithEvents ToolStripAbout As ToolStripButton
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
     Friend WithEvents TextBoxName As TextBox
     Friend WithEvents LblBookName As Label
@@ -635,11 +548,5 @@ Partial Class FormMembers
     Friend WithEvents LibraryManagementDataSet As LibraryManagementDataSet
     Friend WithEvents MembersBindingSource As BindingSource
     Friend WithEvents MembersTableAdapter As LibraryManagementDataSetTableAdapters.MembersTableAdapter
-    Friend WithEvents DataGridViewMembers As DataGridView
-    Friend WithEvents MemberIdDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents NameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents AgeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents PhoneDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents EmailDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents AddressDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents MembersDataGridView As DataGridView
 End Class

@@ -282,6 +282,29 @@ SELECT MemberId, Name, Age, Phone, Email, Address FROM Members WHERE (MemberId =
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vw_BookIssuedRecordTableAdapter" GeneratorDataComponentClassName="vw_BookIssuedRecordTableAdapter" Name="vw_BookIssuedRecord" UserDataComponentName="vw_BookIssuedRecordTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="LibraryManagementConnectionString (MySettings)" DbObjectName="LibraryManagement.dbo.vw_BookIssuedRecord" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT IssueId, BookId, MemberId, BookName, MemberName, IssuedBy, IssueDate, ReturnDate FROM dbo.vw_BookIssuedRecord</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="IssueId" DataSetColumn="IssueId" />
+              <Mapping SourceColumn="BookId" DataSetColumn="BookId" />
+              <Mapping SourceColumn="MemberId" DataSetColumn="MemberId" />
+              <Mapping SourceColumn="BookName" DataSetColumn="BookName" />
+              <Mapping SourceColumn="MemberName" DataSetColumn="MemberName" />
+              <Mapping SourceColumn="IssuedBy" DataSetColumn="IssuedBy" />
+              <Mapping SourceColumn="IssueDate" DataSetColumn="IssueDate" />
+              <Mapping SourceColumn="ReturnDate" DataSetColumn="ReturnDate" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -290,7 +313,7 @@ SELECT MemberId, Name, Age, Phone, Email, Address FROM Members WHERE (MemberId =
   <xs:element name="LibraryManagementDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="LibraryManagementDataSet" msprop:Generator_UserDSName="LibraryManagementDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Books" msprop:Generator_TableClassName="BooksDataTable" msprop:Generator_TableVarName="tableBooks" msprop:Generator_TablePropName="Books" msprop:Generator_RowDeletingName="BooksRowDeleting" msprop:Generator_RowChangingName="BooksRowChanging" msprop:Generator_RowEvHandlerName="BooksRowChangeEventHandler" msprop:Generator_RowDeletedName="BooksRowDeleted" msprop:Generator_UserTableName="Books" msprop:Generator_RowChangedName="BooksRowChanged" msprop:Generator_RowEvArgName="BooksRowChangeEvent" msprop:Generator_RowClassName="BooksRow">
+        <xs:element name="Books" msprop:Generator_TableClassName="BooksDataTable" msprop:Generator_TableVarName="tableBooks" msprop:Generator_RowChangedName="BooksRowChanged" msprop:Generator_TablePropName="Books" msprop:Generator_RowDeletingName="BooksRowDeleting" msprop:Generator_RowChangingName="BooksRowChanging" msprop:Generator_RowEvHandlerName="BooksRowChangeEventHandler" msprop:Generator_RowDeletedName="BooksRowDeleted" msprop:Generator_RowClassName="BooksRow" msprop:Generator_UserTableName="Books" msprop:Generator_RowEvArgName="BooksRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="BookId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnBookId" msprop:Generator_ColumnPropNameInRow="BookId" msprop:Generator_ColumnPropNameInTable="BookIdColumn" msprop:Generator_UserColumnName="BookId" type="xs:int" />
@@ -320,7 +343,7 @@ SELECT MemberId, Name, Age, Phone, Email, Address FROM Members WHERE (MemberId =
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Issues" msprop:Generator_TableClassName="IssuesDataTable" msprop:Generator_TableVarName="tableIssues" msprop:Generator_TablePropName="Issues" msprop:Generator_RowDeletingName="IssuesRowDeleting" msprop:Generator_RowChangingName="IssuesRowChanging" msprop:Generator_RowEvHandlerName="IssuesRowChangeEventHandler" msprop:Generator_RowDeletedName="IssuesRowDeleted" msprop:Generator_UserTableName="Issues" msprop:Generator_RowChangedName="IssuesRowChanged" msprop:Generator_RowEvArgName="IssuesRowChangeEvent" msprop:Generator_RowClassName="IssuesRow">
+        <xs:element name="Issues" msprop:Generator_TableClassName="IssuesDataTable" msprop:Generator_TableVarName="tableIssues" msprop:Generator_RowChangedName="IssuesRowChanged" msprop:Generator_TablePropName="Issues" msprop:Generator_RowDeletingName="IssuesRowDeleting" msprop:Generator_RowChangingName="IssuesRowChanging" msprop:Generator_RowEvHandlerName="IssuesRowChangeEventHandler" msprop:Generator_RowDeletedName="IssuesRowDeleted" msprop:Generator_RowClassName="IssuesRow" msprop:Generator_UserTableName="Issues" msprop:Generator_RowEvArgName="IssuesRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="IssueId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnIssueId" msprop:Generator_ColumnPropNameInRow="IssueId" msprop:Generator_ColumnPropNameInTable="IssueIdColumn" msprop:Generator_UserColumnName="IssueId" type="xs:int" />
@@ -332,7 +355,7 @@ SELECT MemberId, Name, Age, Phone, Email, Address FROM Members WHERE (MemberId =
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Librarians" msprop:Generator_TableClassName="LibrariansDataTable" msprop:Generator_TableVarName="tableLibrarians" msprop:Generator_TablePropName="Librarians" msprop:Generator_RowDeletingName="LibrariansRowDeleting" msprop:Generator_RowChangingName="LibrariansRowChanging" msprop:Generator_RowEvHandlerName="LibrariansRowChangeEventHandler" msprop:Generator_RowDeletedName="LibrariansRowDeleted" msprop:Generator_UserTableName="Librarians" msprop:Generator_RowChangedName="LibrariansRowChanged" msprop:Generator_RowEvArgName="LibrariansRowChangeEvent" msprop:Generator_RowClassName="LibrariansRow">
+        <xs:element name="Librarians" msprop:Generator_TableClassName="LibrariansDataTable" msprop:Generator_TableVarName="tableLibrarians" msprop:Generator_RowChangedName="LibrariansRowChanged" msprop:Generator_TablePropName="Librarians" msprop:Generator_RowDeletingName="LibrariansRowDeleting" msprop:Generator_RowChangingName="LibrariansRowChanging" msprop:Generator_RowEvHandlerName="LibrariansRowChangeEventHandler" msprop:Generator_RowDeletedName="LibrariansRowDeleted" msprop:Generator_RowClassName="LibrariansRow" msprop:Generator_UserTableName="Librarians" msprop:Generator_RowEvArgName="LibrariansRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="LibrarianId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnLibrarianId" msprop:Generator_ColumnPropNameInRow="LibrarianId" msprop:Generator_ColumnPropNameInTable="LibrarianIdColumn" msprop:Generator_UserColumnName="LibrarianId" type="xs:int" />
@@ -381,7 +404,7 @@ SELECT MemberId, Name, Age, Phone, Email, Address FROM Members WHERE (MemberId =
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Members" msprop:Generator_TableClassName="MembersDataTable" msprop:Generator_TableVarName="tableMembers" msprop:Generator_TablePropName="Members" msprop:Generator_RowDeletingName="MembersRowDeleting" msprop:Generator_RowChangingName="MembersRowChanging" msprop:Generator_RowEvHandlerName="MembersRowChangeEventHandler" msprop:Generator_RowDeletedName="MembersRowDeleted" msprop:Generator_UserTableName="Members" msprop:Generator_RowChangedName="MembersRowChanged" msprop:Generator_RowEvArgName="MembersRowChangeEvent" msprop:Generator_RowClassName="MembersRow">
+        <xs:element name="Members" msprop:Generator_TableClassName="MembersDataTable" msprop:Generator_TableVarName="tableMembers" msprop:Generator_RowChangedName="MembersRowChanged" msprop:Generator_TablePropName="Members" msprop:Generator_RowDeletingName="MembersRowDeleting" msprop:Generator_RowChangingName="MembersRowChanging" msprop:Generator_RowEvHandlerName="MembersRowChangeEventHandler" msprop:Generator_RowDeletedName="MembersRowDeleted" msprop:Generator_RowClassName="MembersRow" msprop:Generator_UserTableName="Members" msprop:Generator_RowEvArgName="MembersRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="MemberId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnMemberId" msprop:Generator_ColumnPropNameInRow="MemberId" msprop:Generator_ColumnPropNameInTable="MemberIdColumn" msprop:Generator_UserColumnName="MemberId" type="xs:int" />
@@ -417,6 +440,32 @@ SELECT MemberId, Name, Age, Phone, Email, Address FROM Members WHERE (MemberId =
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="vw_BookIssuedRecord" msprop:Generator_TableClassName="vw_BookIssuedRecordDataTable" msprop:Generator_TableVarName="tablevw_BookIssuedRecord" msprop:Generator_TablePropName="vw_BookIssuedRecord" msprop:Generator_RowDeletingName="vw_BookIssuedRecordRowDeleting" msprop:Generator_RowChangingName="vw_BookIssuedRecordRowChanging" msprop:Generator_RowEvHandlerName="vw_BookIssuedRecordRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_BookIssuedRecordRowDeleted" msprop:Generator_UserTableName="vw_BookIssuedRecord" msprop:Generator_RowChangedName="vw_BookIssuedRecordRowChanged" msprop:Generator_RowEvArgName="vw_BookIssuedRecordRowChangeEvent" msprop:Generator_RowClassName="vw_BookIssuedRecordRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IssueId" msprop:Generator_ColumnVarNameInTable="columnIssueId" msprop:Generator_ColumnPropNameInRow="IssueId" msprop:Generator_ColumnPropNameInTable="IssueIdColumn" msprop:Generator_UserColumnName="IssueId" type="xs:int" />
+              <xs:element name="BookId" msprop:Generator_ColumnVarNameInTable="columnBookId" msprop:Generator_ColumnPropNameInRow="BookId" msprop:Generator_ColumnPropNameInTable="BookIdColumn" msprop:Generator_UserColumnName="BookId" type="xs:int" />
+              <xs:element name="MemberId" msprop:Generator_ColumnVarNameInTable="columnMemberId" msprop:Generator_ColumnPropNameInRow="MemberId" msprop:Generator_ColumnPropNameInTable="MemberIdColumn" msprop:Generator_UserColumnName="MemberId" type="xs:int" />
+              <xs:element name="BookName" msprop:Generator_ColumnVarNameInTable="columnBookName" msprop:Generator_ColumnPropNameInRow="BookName" msprop:Generator_ColumnPropNameInTable="BookNameColumn" msprop:Generator_UserColumnName="BookName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MemberName" msprop:Generator_ColumnVarNameInTable="columnMemberName" msprop:Generator_ColumnPropNameInRow="MemberName" msprop:Generator_ColumnPropNameInTable="MemberNameColumn" msprop:Generator_UserColumnName="MemberName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IssuedBy" msprop:Generator_ColumnVarNameInTable="columnIssuedBy" msprop:Generator_ColumnPropNameInRow="IssuedBy" msprop:Generator_ColumnPropNameInTable="IssuedByColumn" msprop:Generator_UserColumnName="IssuedBy" type="xs:int" />
+              <xs:element name="IssueDate" msprop:Generator_ColumnVarNameInTable="columnIssueDate" msprop:Generator_ColumnPropNameInRow="IssueDate" msprop:Generator_ColumnPropNameInTable="IssueDateColumn" msprop:Generator_UserColumnName="IssueDate" type="xs:dateTime" />
+              <xs:element name="ReturnDate" msprop:Generator_ColumnVarNameInTable="columnReturnDate" msprop:Generator_ColumnPropNameInRow="ReturnDate" msprop:Generator_ColumnPropNameInTable="ReturnDateColumn" msprop:Generator_UserColumnName="ReturnDate" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -435,12 +484,18 @@ SELECT MemberId, Name, Age, Phone, Email, Address FROM Members WHERE (MemberId =
       <xs:selector xpath=".//mstns:Members" />
       <xs:field xpath="mstns:MemberId" />
     </xs:unique>
+    <xs:unique name="vw_BookIssuedRecord_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vw_BookIssuedRecord" />
+      <xs:field xpath="mstns:IssueId" />
+      <xs:field xpath="mstns:BookId" />
+      <xs:field xpath="mstns:MemberId" />
+    </xs:unique>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_books_issue" msdata:parent="Books" msdata:child="Issues" msdata:parentkey="BookId" msdata:childkey="BookId" msprop:Generator_UserChildTable="Issues" msprop:Generator_ChildPropName="GetIssuesRows" msprop:Generator_UserRelationName="FK_books_issue" msprop:Generator_ParentPropName="BooksRow" msprop:Generator_RelationVarName="relationFK_books_issue" msprop:Generator_UserParentTable="Books" />
-      <msdata:Relationship name="FK_librarianw_issue" msdata:parent="Librarians" msdata:child="Issues" msdata:parentkey="LibrarianId" msdata:childkey="IssuedBy" msprop:Generator_UserChildTable="Issues" msprop:Generator_ChildPropName="GetIssuesRows" msprop:Generator_UserRelationName="FK_librarianw_issue" msprop:Generator_RelationVarName="relationFK_librarianw_issue" msprop:Generator_UserParentTable="Librarians" msprop:Generator_ParentPropName="LibrariansRow" />
-      <msdata:Relationship name="FK_members_issue" msdata:parent="Members" msdata:child="Issues" msdata:parentkey="MemberId" msdata:childkey="MemberId" msprop:Generator_UserChildTable="Issues" msprop:Generator_ChildPropName="GetIssuesRows" msprop:Generator_UserRelationName="FK_members_issue" msprop:Generator_RelationVarName="relationFK_members_issue" msprop:Generator_UserParentTable="Members" msprop:Generator_ParentPropName="MembersRow" />
+      <msdata:Relationship name="FK_books_issue" msdata:parent="Books" msdata:child="Issues" msdata:parentkey="BookId" msdata:childkey="BookId" msprop:Generator_UserChildTable="Issues" msprop:Generator_ChildPropName="GetIssuesRows" msprop:Generator_UserRelationName="FK_books_issue" msprop:Generator_RelationVarName="relationFK_books_issue" msprop:Generator_UserParentTable="Books" msprop:Generator_ParentPropName="BooksRow" />
+      <msdata:Relationship name="FK_librarianw_issue" msdata:parent="Librarians" msdata:child="Issues" msdata:parentkey="LibrarianId" msdata:childkey="IssuedBy" msprop:Generator_UserChildTable="Issues" msprop:Generator_ChildPropName="GetIssuesRows" msprop:Generator_UserRelationName="FK_librarianw_issue" msprop:Generator_ParentPropName="LibrariansRow" msprop:Generator_RelationVarName="relationFK_librarianw_issue" msprop:Generator_UserParentTable="Librarians" />
+      <msdata:Relationship name="FK_members_issue" msdata:parent="Members" msdata:child="Issues" msdata:parentkey="MemberId" msdata:childkey="MemberId" msprop:Generator_UserChildTable="Issues" msprop:Generator_ChildPropName="GetIssuesRows" msprop:Generator_UserRelationName="FK_members_issue" msprop:Generator_ParentPropName="MembersRow" msprop:Generator_RelationVarName="relationFK_members_issue" msprop:Generator_UserParentTable="Members" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

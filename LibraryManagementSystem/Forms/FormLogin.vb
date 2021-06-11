@@ -9,16 +9,16 @@
         Else
             Dim query As String = "SELECT UserName, LibrarianId FROM Librarians WHERE UserName = '" & username & "' AND Password = '" & password & "'"
 
-            Dim dataSet = SearchData(query)
+            Dim dataSet = GetDataset(query)
 
             If dataSet.Tables(0).Rows.Count > 0 Then
-                currentUserId = dataSet.Tables(0).Rows(0).Item("LibrarianId")
-                currentUserName = dataSet.Tables(0).Rows(0).Item("UserName")
+                CurrentUserId = dataSet.Tables(0).Rows(0).Item("LibrarianId")
+                CurrentUserName = dataSet.Tables(0).Rows(0).Item("UserName")
 
                 TextBoxUsername.Clear()
                 TextBoxPassword.Clear()
 
-                FormHome.Show()
+                FormDashboard.Show()
                 Me.Hide()
             Else
                 MsgBox("Incorrect username or password", MsgBoxStyle.Critical, "Login")
